@@ -6,9 +6,25 @@
     color: #fff;
 }
 
+*::selection{
+    color: #fff;
+    background-color: #800080;
+}
+
+
 html, body{
     height: 100%;
     width: 100%;
+}
+
+body::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+    background: #800080;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 #nav{
@@ -107,7 +123,354 @@ video{
 }
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: 10;
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+  }
+
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+
+#scroller h4{
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    /* font-family: gilroy; */
+    font-family: sans-serif;
+    margin-right: 40px;
+    color: black;
+    transition: all linear 0.2s;
+    -webkit-text-stroke: 1px white;
+    text-transform: uppercase;
+}
+
+#scroller h4:hover{
+    color: #800080;
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+#About-us{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    /* background-color: red; */
+    position: relative;
+    z-index: 10;
+}
+
+#About-us-in {
+    width: 55%;
+    text-align: center;
+}
+
+#About-us-in h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+#About-us-in p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#About-us img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#card-contianer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: 60vh;
+    width: 100%;
+    margin-bottom: 50px;
+    /* background-color: red; */
+}
+
+.card{
+    height: 80%;
+    width: 25%;
+    border-radius: 15px;
+    /* background-color: blue; */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    cursor: pointer;
+}
+
+#card1{
+    background-image: url(https://www.superherodb.com/pictures2/portraits/10/050/12696.jpg?v=1651274508);
+}
+
+#card2{
+    background-image: url(https://qph.cf2.quoracdn.net/main-qimg-673c3722f8814cb2e16b2e149dad36d9-lq);
+}
+
+#card3{
+    background-image: url(https://qph.cf2.quoracdn.net/main-qimg-7e0e1e5dcd24de71a5f927b667c58bba-lq);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #800080;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4{
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    font-size: 18px;
+    color: #000;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(1,1,0,15deg);
+}
+
+#dialogue{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: red; */
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+    /* background-image: url(https://img.freepik.com/free-vector/purple-lightning-smoke-effect-frame-background-3d-abstract-thunder-glow-cloud-border-design-element-isolated-glowing-thunderbolt-impact-overlay-with-fluffy-texture-transculent-fog-with-sparkle_107791-23172.jpg?t=st=1722617908~exp=1722621508~hmac=fea6a7094ff8cfe466ca9a6710b7587131ce62fd269aa5c7184380a1757c16ef&w=826); */
+    background: linear-gradient(to left bottom, #640057,#4400ff);
+}
+
+#dialogue h4{
+    color: #000;
+    width: 50%;
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#dialogue p{
+    color: #000;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+#page3>p{
+    font-size: 16px;
+    font-weight: 500;
+    width: 55%;
+    text-align: center;
+    line-height:35px;
+}
+
+#page3 img{
+    position: absolute;
+    height: 160px;
+}
+
+#page3 #katana1{
+    left: 10%;
+    top: 20%;
+}
+
+#page3 #katana2{
+    bottom: 23%;
+    right: 10%;
+}
+
+#page4{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 50px;
+    padding: 0 80px;
+    position: relative;
+}
+
+#elem{
+    height: 65%;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    z-index:10;
+}
+
+#elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #800080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 800;
+    color: #000;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+
+#elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    scale: 1.1;
+    transition: all ease 0.5s;
+}
+
+#elem:hover h2{
+    color: white;
+    background-color: transparent;
+}
+
+#elem:hover img{
+    scale: 1;
+}
+
+#footer{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(to left bottom, #640057,#4400ff);
+    position: relative;
+    z-index: 10;
+}
+
+#f1, #f2, #f3, #f4{
+    width: 40%;
+    height: 80%;
+}
+
+#f1{
+    padding: 20px 40px;
+    padding-left: 90px;
+}
+
+#f1 img{
+    height: 130px;
+    position: relative;
+    cursor: pointer;
+    transition: all linear 0.15s;
+}
+
+#f1 img:hover{
+    scale: 1.1;
+}
+
+#f1 i{
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    transition: all linear 0.15s;
+}
+
+#f1 i:hover{
+    color: #fff;
+}
+
+#f2{
+    padding: 40px 40px;
+    padding-left: 90px;
+}
+
+#f2 h3{
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all linear 0.15s;
+}
+
+#f2 h3:hover{
+    color: #fff;
+}
+
+#f3{
+    padding: 40px 40px;
+    padding-left: 90px;
+}
+
+#f3 h3{
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#f3 h3:hover{
+    color: #fff;
 }
