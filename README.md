@@ -40,6 +40,6 @@
 
 <div class="section" id="contact">
         <h2>Contact</h2>
-        <p>Your Name - <a href="nikhilkanojia693@gmail.com">nikhilkanojia693@gmail.com</a></p>
+        <p>Email - <a href="nikhilkanojia693@gmail.com">nikhilkanojia693@gmail.com</a></p>
         <p>Live Demo: <a href="https://404nix.github.io/FrontEndDevlopment/">https://404nix.github.io/FrontEndDevlopment/</a></p>
     </div>
