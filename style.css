@@ -46,6 +46,7 @@ body::-webkit-scrollbar-thumb{
     background-color: #800080;
     border-radius: 50%;
     position: fixed;
+    pointer-events: none;
     z-index: 99;
 }
 
